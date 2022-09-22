@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>JSON Schema LD documentation &#8212; JSON Schema LD Specification 2020-08 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/jsonschema.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/jsonschema.js"></script>
+    <link rel="shortcut icon" href="_static/logo.ico"/>
+    <link rel="author" title="About these documents" href="about.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="_static/js/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+<script type="text/javascript" src="_static/bootstrap-3.4.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-99695987-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-99695987-1');
+</script>
+
+  </head><body>
+  
+  <a href="https://github.com/json-schema-org/understanding-json-schema"
+     class="visible-desktop"><img
+    style="position: absolute; z-index: 10; top: 40px; right: 0; border: 0;"
+    src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png"
+    alt="Fork me on GitHub"></a>
+
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">
+          JSON Schema LD Specification</a>
+        <span class="navbar-text navbar-version pull-left"><b>2022-08</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Document <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><p class="caption" role="heading"><span class="caption-text">Table of contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">JSON Schema LD documentation</a></li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+              
+            
+            
+            
+            
+              <li class="hidden-sm"></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="body col-md-12 content" role="main">
+      
+  <section id="json-schema-ld-documentation">
+<h1>JSON Schema LD documentation<a class="headerlink" href="#json-schema-ld-documentation" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Table of contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">JSON Schema LD documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#about-the-project">About The Project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#from-json-schema-to-rdf">From JSON Schema to RDF</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#getting-started">Getting Started</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<section id="about-the-project">
+<h2>About The Project<a class="headerlink" href="#about-the-project" title="Permalink to this headline">¶</a></h2>
+<p>JSON Schema LD, hereafter JSC-LD, is a syntactic sugar for <a class="reference external" href="https://json-schema.org/">JSON Schema</a> to enable generative interoperability
+by means of representing JSON schema in RDF vocabularies (<a class="reference external" href="https://www.w3.org/TR/rdf-schema/">RDF Schema</a>) and RDF
+shapes (<a class="reference external" href="https://www.w3.org/TR/shacl/">SHACL</a>).</p>
+</section>
+<section id="from-json-schema-to-rdf">
+<h2>From JSON Schema to RDF<a class="headerlink" href="#from-json-schema-to-rdf" title="Permalink to this headline">¶</a></h2>
+<p>A JSON Schema is a declarative vocabulary specifies a number of rules to describe what objects serialized in JSON based
+format should look like. With JSC-LD, domain models and application profiles are extracted from existing
+implementation model in JSON Schema and represented in <a class="reference external" href="https://www.w3.org/TR/rdf-schema/">RDF Schema</a> and <a class="reference external" href="https://www.w3.org/TR/shacl/">Shacl shapes</a>.</p>
+<p><strong>Built With</strong></p>
+<a class="reference external image-reference" href="https://www.typescriptlang.org/"><img alt="_images/nodejs.jpg" src="_images/nodejs.jpg" style="width: 100px; height: 50px;" /></a>
+<a class="reference external image-reference" href="https://nodejs.org/en/"><img alt="_images/typescript.png" src="_images/typescript.png" style="width: 100px; height: 50px;" /></a>
+<a class="reference external image-reference" href="http://rdf.js.org/N3.js/"><img alt="_images/n3js.png" src="_images/n3js.png" style="width: 100px; height: 50px;" /></a>
+</section>
+<section id="getting-started">
+<h2>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h2>
+<section id="prerequisites">
+<h3>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference internal" href="jsc_ld_configuration.html#jsc-ld-configuration"><span class="std std-ref">JSON Schema LD Configuration</span></a></p></li>
+<li><p><a class="reference internal" href="jsc_ld_syntax.html#jsc-ld-syntax"><span class="std std-ref">JSON Schema LD Annotation Syntax</span></a></p></li>
+<li><p><a class="reference internal" href="jsc_installation.html#jsc-installation"><span class="std std-ref">JSON Schema LD Installation</span></a></p></li>
+</ul>
+</section>
+<section id="usage">
+<h3>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference internal" href="jsc_examples.html#jsc-examples"><span class="std std-ref">JSON Schema LD Examples</span></a></p>
+</section>
+<section id="limitations">
+<h3>Limitations<a class="headerlink" href="#limitations" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="lisense-and-contributions">
+<h3>Lisense and contributions<a class="headerlink" href="#lisense-and-contributions" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="contact">
+<h3>Contact<a class="headerlink" href="#contact" title="Permalink to this headline">¶</a></h3>
+<p>Jiao Long <a class="reference external" href="mailto:Jiao&#46;Long&#37;&#52;&#48;UGent&#46;be">Jiao<span>&#46;</span>Long<span>&#64;</span>UGent<span>&#46;</span>be</a></p>
+<p>IDLab, Ghent University – imec</p>
+</section>
+<section id="acknowledgements">
+<h3>Acknowledgements<a class="headerlink" href="#acknowledgements" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+</section>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2022, IDLab, Ghent University – imec.<br/>
+      Last updated on Sep 20, 2022.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.3.2.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>
