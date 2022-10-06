@@ -1,6 +1,0 @@
-===========
-Limitations
-===========
-
-JSON Schema drafts
-------------------

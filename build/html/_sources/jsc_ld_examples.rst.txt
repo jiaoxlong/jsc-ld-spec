@@ -1,0 +1,139 @@
+.. _jsc_ld_examples:
+
+================================
+JSON Schema LD Examples
+================================
+
+.. schema_example::
+
+   { }
+   --
+   // This accepts anything, as long as it's valid JSON
+   42
+   --
+   "I'm a string"
+   --
+   { "an": [ "arbitrarily", "nested" ], "data": "structure" }
+
+.. draft_specific::
+
+    --Draft 4
+    In Draft 4, a ``$schema`` value of
+    ``http://json-schema.org/schema#`` referred to the latest version
+    of JSON Schema. This usage has since been deprecated and the use
+    of specific version URIs is required.
+
+.. language_specific::
+
+    --Python
+    The following table maps from the names of JavaScript types to
+    their analogous types in Python:
+
+    +----------+-----------+
+    |JavaScript|Python     |
+    +----------+-----------+
+    |string    |string     |
+    |          |[#1]_      |
+    +----------+-----------+
+    |number    |int/float  |
+    |          |[#2]_      |
+    +----------+-----------+
+    |object    |dict       |
+    +----------+-----------+
+    |array     |list       |
+    +----------+-----------+
+    |boolean   |bool       |
+    +----------+-----------+
+    |null      |None       |
+    +----------+-----------+
+
+    .. rubric:: Footnotes
+
+    .. [#1] Since JavaScript strings always support unicode, they are
+            analogous to ``unicode`` on Python 2.x and ``str`` on
+            Python 3.x.
+
+    .. [#2] JavaScript does not have separate types for integer and
+            floating-point.
+
+    --Ruby
+    The following table maps from the names of JavaScript types to
+    their analogous types in Ruby:
+
+    +----------+----------------------+
+    |JavaScript|Ruby                  |
+    +----------+----------------------+
+    |string    |String                |
+    +----------+----------------------+
+    |number    |Integer/Float         |
+    |          |[#3]_                 |
+    +----------+----------------------+
+    |object    |Hash                  |
+    +----------+----------------------+
+    |array     |Array                 |
+    +----------+----------------------+
+    |boolean   |TrueClass/FalseClass  |
+    +----------+----------------------+
+    |null      |NilClass              |
+    +----------+----------------------+
+
+    .. rubric:: Footnotes
+
+    .. [#3] JavaScript does not have separate types for integer and
+            floating-point.
+
+Draft-specific notes
+--------------------
+
+The JSON Schema standard has been through a number of revisions or
+"drafts". The current version is Draft 2020-12, but some older drafts
+are still widely used as well.
+
+The text is written to encourage the use of Draft 2020-12 and gives
+priority to the latest conventions and features, but where it differs
+from earlier drafts, those differences are highlighted in special
+call-outs. If you only wish to target Draft 2020-12, you can safely
+ignore those sections.
+
+|draft2020-12|
+
+.. draft_specific::
+
+   --Draft 2019-09
+   This is where anything pertaining to an old draft would be mentioned.
+
+
+Examples
+--------
+
+There are many examples throughout this book, and they all follow
+the same format.  At the beginning of each example is a short JSON
+schema, illustrating a particular principle, followed by short JSON
+snippets that are either valid or invalid against that schema.  Valid
+examples are in green, with a checkmark.  Invalid examples are in red,
+with a cross.  Often there are comments in between to explain why
+something is or isn't valid.
+
+.. note::
+    These examples are tested automatically whenever the book is
+    built, so hopefully they are not just helpful, but also correct!
+
+For example, here's a snippet illustrating how to use the ``number``
+type:
+
+.. schema_example::
+
+    { "type": "number" }
+    --
+    42
+    --
+    -1
+    --
+    // Simple floating point number:
+    5.0
+    --
+    // Exponential notation also works:
+    2.99792458e8
+    --X
+    // Numbers as strings are rejected:
+    "42"

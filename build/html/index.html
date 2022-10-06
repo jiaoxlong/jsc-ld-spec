@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>JSON Schema LD documentation &#8212; JSON Schema LD Specification 2020-08 documentation</title>
+    <title>JSON Schema LD specification &#8212; JSON Schema LD Specification 2020-08 documentation</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/jsonschema.css" />
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
@@ -14,9 +14,9 @@
     <script src="_static/doctools.js"></script>
     <script src="_static/jsonschema.js"></script>
     <link rel="shortcut icon" href="_static/logo.ico"/>
-    <link rel="author" title="About these documents" href="about.html" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="How to install JSC-LD" href="jsc_ld_installation.html" />
 
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
@@ -28,7 +28,6 @@
 <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-99695987-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -39,7 +38,7 @@
 
   </head><body>
   
-  <a href="https://github.com/json-schema-org/understanding-json-schema"
+  <a href="https://github.com/jiaoxlong/jsc-ld"
      class="visible-desktop"><img
     style="position: absolute; z-index: 10; top: 40px; right: 0; border: 0;"
     src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png"
@@ -74,7 +73,11 @@
       role="menu"
       aria-labelledby="dLabelGlobalToc"><p class="caption" role="heading"><span class="caption-text">Table of contents:</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">JSON Schema LD documentation</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">JSON Schema LD specification</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jsc_ld_installation.html">How to install JSC-LD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jsc_ld_configuration.html">JSC-LD configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jsc_ld_syntax.html">JSC-LD Annotation Syntax</a></li>
+<li class="toctree-l1"><a class="reference internal" href="supported_jsc_kws.html">Supported JSON Schema keywords</a></li>
 </ul>
 </ul>
 </li>
@@ -83,6 +86,10 @@
             
               
                 
+  <li>
+    <a href="jsc_ld_installation.html" title="Next Chapter: How to install JSC-LD"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">How to install JSC-LD &raquo;</span>
+    </a>
+  </li>
               
             
             
@@ -110,27 +117,13 @@
   <div class="row">
     <div class="body col-md-12 content" role="main">
       
-  <section id="json-schema-ld-documentation">
-<h1>JSON Schema LD documentation<a class="headerlink" href="#json-schema-ld-documentation" title="Permalink to this headline">¶</a></h1>
+  <section id="json-schema-ld-specification">
+<h1>JSON Schema LD specification<a class="headerlink" href="#json-schema-ld-specification" title="Permalink to this headline">¶</a></h1>
 <div class="toctree-wrapper compound">
-<p class="caption" role="heading"><span class="caption-text">Table of contents:</span></p>
-<ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">JSON Schema LD documentation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#about-the-project">About The Project</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#from-json-schema-to-rdf">From JSON Schema to RDF</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#getting-started">Getting Started</a></li>
-</ul>
-</li>
-</ul>
 </div>
-<section id="about-the-project">
-<h2>About The Project<a class="headerlink" href="#about-the-project" title="Permalink to this headline">¶</a></h2>
-<p>JSON Schema LD, hereafter JSC-LD, is a syntactic sugar for <a class="reference external" href="https://json-schema.org/">JSON Schema</a> to enable generative interoperability
+<p>JSON Schema for Linked Data, hereafter JSC-LD/jsc-ld, is a syntactic sugar for <a class="reference external" href="https://json-schema.org/">JSON Schema</a> to enable generative interoperability
 by means of representing JSON schema in RDF vocabularies (<a class="reference external" href="https://www.w3.org/TR/rdf-schema/">RDF Schema</a>) and RDF
 shapes (<a class="reference external" href="https://www.w3.org/TR/shacl/">SHACL</a>).</p>
-</section>
-<section id="from-json-schema-to-rdf">
-<h2>From JSON Schema to RDF<a class="headerlink" href="#from-json-schema-to-rdf" title="Permalink to this headline">¶</a></h2>
 <p>A JSON Schema is a declarative vocabulary specifies a number of rules to describe what objects serialized in JSON based
 format should look like. With JSC-LD, domain models and application profiles are extracted from existing
 implementation model in JSON Schema and represented in <a class="reference external" href="https://www.w3.org/TR/rdf-schema/">RDF Schema</a> and <a class="reference external" href="https://www.w3.org/TR/shacl/">Shacl shapes</a>.</p>
@@ -138,34 +131,48 @@ implementation model in JSON Schema and represented in <a class="reference exter
 <a class="reference external image-reference" href="https://www.typescriptlang.org/"><img alt="_images/nodejs.jpg" src="_images/nodejs.jpg" style="width: 100px; height: 50px;" /></a>
 <a class="reference external image-reference" href="https://nodejs.org/en/"><img alt="_images/typescript.png" src="_images/typescript.png" style="width: 100px; height: 50px;" /></a>
 <a class="reference external image-reference" href="http://rdf.js.org/N3.js/"><img alt="_images/n3js.png" src="_images/n3js.png" style="width: 100px; height: 50px;" /></a>
-</section>
 <section id="getting-started">
 <h2>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h2>
 <section id="prerequisites">
 <h3>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li><p><a class="reference internal" href="jsc_ld_configuration.html#jsc-ld-configuration"><span class="std std-ref">JSON Schema LD Configuration</span></a></p></li>
-<li><p><a class="reference internal" href="jsc_ld_syntax.html#jsc-ld-syntax"><span class="std std-ref">JSON Schema LD Annotation Syntax</span></a></p></li>
-<li><p><a class="reference internal" href="jsc_installation.html#jsc-installation"><span class="std std-ref">JSON Schema LD Installation</span></a></p></li>
+<li><p><a class="reference internal" href="jsc_ld_installation.html#jsc-ld-installation"><span class="std std-ref">How to install JSC-LD</span></a></p></li>
+<li><p><a class="reference internal" href="jsc_ld_configuration.html#jsc-ld-configuration"><span class="std std-ref">JSC-LD configuration</span></a></p></li>
+<li><p><a class="reference internal" href="jsc_ld_syntax.html#jsc-ld-syntax"><span class="std std-ref">JSC-LD Annotation Syntax</span></a></p></li>
 </ul>
 </section>
 <section id="usage">
 <h3>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h3>
-<p><a class="reference internal" href="jsc_examples.html#jsc-examples"><span class="std std-ref">JSON Schema LD Examples</span></a></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>  $ jsc-ld --source json_schema.js --out out --config config.js
+  $ jsc-ld --source json_schema.js --config config.js
+  $ jsc-ld -s json_schema.js -c config.js
+
+Options
+
+  -c, --config config_file                     JSC-LD configuration file
+  -s, --source path/to/source/file|directory   Path to a JSON schema file or a directory contains JSON schema files
+  -o, --out path/to/directory                  Path to output directory defaults to &quot;out&quot;
+  -h, --help                                   Display this usage guide
+</pre></div>
+</div>
 </section>
 <section id="limitations">
 <h3>Limitations<a class="headerlink" href="#limitations" title="Permalink to this headline">¶</a></h3>
+<p>JSC-LD is developed upon the latest draft <code class="docutils literal notranslate"><span class="pre">2020-12</span></code> to describe data formats. Some custom keywords defined in <a class="reference external" href="https://json-schema.org/specification-links.html">a prior draft</a> may not be supported.
+Keywords that are supported by JSC-LD can be found <a class="reference internal" href="supported_jsc_kws.html#supported-jsc-kws"><span class="std std-ref">Supported JSON Schema keywords</span></a>.</p>
 </section>
-<section id="lisense-and-contributions">
-<h3>Lisense and contributions<a class="headerlink" href="#lisense-and-contributions" title="Permalink to this headline">¶</a></h3>
+<section id="contribute">
+<h3>contribute<a class="headerlink" href="#contribute" title="Permalink to this headline">¶</a></h3>
+<p>Do not hesitate to <a class="reference external" href="https://github.com/jiaoxlong/jsc-ld/issues">report a bug</a>.</p>
+</section>
+<section id="lisense">
+<h3>Lisense<a class="headerlink" href="#lisense" title="Permalink to this headline">¶</a></h3>
+<p>This code is copyrighted by IDLab, Ghent University – imec and released under the MIT license.</p>
 </section>
 <section id="contact">
 <h3>Contact<a class="headerlink" href="#contact" title="Permalink to this headline">¶</a></h3>
-<p>Jiao Long <a class="reference external" href="mailto:Jiao&#46;Long&#37;&#52;&#48;UGent&#46;be">Jiao<span>&#46;</span>Long<span>&#64;</span>UGent<span>&#46;</span>be</a></p>
+<p><a class="reference external" href="mailto:Jiao&#46;Long&#37;&#52;&#48;UGent&#46;be">Jiao Long</a>, <a class="reference external" href="mailto:brecht&#46;vandevyvere&#37;&#52;&#48;ugent&#46;be">Brecht Van de Vyvere</a> and <a class="reference external" href="mailto:pieter&#46;colpaert&#37;&#52;&#48;ugent&#46;be">Pieter Colpaert</a></p>
 <p>IDLab, Ghent University – imec</p>
-</section>
-<section id="acknowledgements">
-<h3>Acknowledgements<a class="headerlink" href="#acknowledgements" title="Permalink to this headline">¶</a></h3>
 </section>
 </section>
 </section>
@@ -183,7 +190,7 @@ implementation model in JSON Schema and represented in <a class="reference exter
     </p>
     <p>
         &copy; Copyright 2022, IDLab, Ghent University – imec.<br/>
-      Last updated on Sep 20, 2022.<br/>
+      Last updated on Oct 06, 2022.<br/>
       Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.3.2.<br/>
     </p>
   </div>

@@ -1,37 +1,21 @@
-.. _jsc_ld_configuration:
+# JSC-LD configuration
 
-====================
-JSC-LD configuration
-====================
-
-+-------------------+------------------------------------+
 | Keyword           | Description                        |
-+-------------------+------------------------------------+
+|-------------------|------------------------------------|
 | ``"$id"``         | The base URI for the JSC-LD schema |
-+-------------------+------------------------------------+
 | ``"base_prefix"`` | RDF namespace prefix               |
-+-------------------+------------------------------------+
 | ``"base_url"``    | The URI for the RDF namespace      |
-+-------------------+------------------------------------+
 | ``"title"``       | (Optional) JSC-LD title            |
-+-------------------+------------------------------------+
 | ``"format"``      | (Optional) defaults to "Turtle"    |
-+-------------------+------------------------------------+
 | ``"description"`` | (Optional) JSC-LD description      |
-+-------------------+------------------------------------+
 | ``"creators"``    | (Optional) WebID or URI            |
-+-------------------+------------------------------------+
 | ``"license"``     | (Optional) Open software license   |
-+-------------------+------------------------------------+
 | ``"rights"``      | (Optional) Copyright               |
-+-------------------+------------------------------------+
 | ``"modified"``    | (Optional) xsd:datetime            |
-+-------------------+------------------------------------+
 
-Below is a template of jsc-ld configuration which can be also found at `config.json <https://github.com/jiaoxlong/jsc-ld/blob/main/configs/config_template.json>`_.
+Below is a template of jsc-ld configuration which can be also found at [config.json](https://github.com/jiaoxlong/jsc-ld/blob/main/configs/config_template.json).
 
-.. schema_example::
-
+```json
     {
       "$id": "https://www.example.com/example-ld.json",
       "base_prefix": "example",
@@ -48,4 +32,4 @@ Below is a template of jsc-ld configuration which can be also found at `config.j
       "rights": "Copyright statement",
       "modified": "2022-06-02T11:32:52.12679"
     }
-
+```

@@ -40,7 +40,7 @@ needs_sphinx = '1.7'
 # Add any Sphinx extension module names here, as strings. They can be extensions
 # coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
 extensions = ['sphinx.ext.mathjax', 'sphinx.ext.ifconfig',
-              'sphinxext.jsonschemaext', 'sphinxext.tab']
+              'sphinxext.jsonschemaext', 'sphinxext.tab', 'sphinx_markdown_builder']
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -80,7 +80,7 @@ release = '2020-08'
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
-exclude_patterns = []
+exclude_patterns = ['build/*']
 
 # The reST default role (used for this markup: `text`) to use for all documents.
 default_role = "ref"
